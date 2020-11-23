@@ -2,4 +2,4 @@
 ## Выполнил: Залесский Александр Андреевич, группа 821701
 + Результатом данной лабораторной работы является компрессор изображений с помощью линейной рециркуляционной сети
 + Вариант 6: Реализовать модель линейной рециркуляционной сети с адаптивным шагом обучения
-+ Также тут есть отчет в формате pdf или google документ с отчетом по ссылке: https://docs.google.com/document/d/1Mj_Uiq88V-FCdy_Q1lHk6idYWBhaoskGhsihgyMQDbM/edit?usp=sharing
++ Также тут есть ссылка на отчет: https://docs.google.com/document/d/1Mj_Uiq88V-FCdy_Q1lHk6idYWBhaoskGhsihgyMQDbM/edit?usp=sharing
