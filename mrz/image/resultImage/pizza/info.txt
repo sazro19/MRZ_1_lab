@@ -1,4 +1,4 @@
-Summary:
+Info:
 	Block height: 8
 	Block width: 8
 	Number of hidden layer neurons: 32

@@ -4,11 +4,11 @@ package compressorPackage.compressor;
 // максимальную допустимую ошибку, шаг обучения(если он неадаптивный)
 public class Config {
 
-    public static final String IMAGE_NAME = "mario";
+    public static final String IMAGE_NAME = "c19";
     public static final String IMAGE_FORMAT = "jpg";
     public static final String IN_IMAGE_PATH = System.getProperty("user.dir") + "\\image\\imageIn\\" + IMAGE_NAME + "." + IMAGE_FORMAT;
-    public static final String OUT_IMAGE_PATH = System.getProperty("user.dir") + "\\image\\imageOut\\" + IMAGE_NAME + "\\resultImage." + IMAGE_FORMAT;
-    public static final String OUT_INFO_PATH = System.getProperty("user.dir") + "\\image\\imageOut\\" + IMAGE_NAME + "\\info.txt";
+    public static final String OUT_IMAGE_PATH = System.getProperty("user.dir") + "\\image\\resultImage\\" + IMAGE_NAME + "\\resultImage." + IMAGE_FORMAT;
+    public static final String OUT_INFO_PATH = System.getProperty("user.dir") + "\\image\\resultImage\\" + IMAGE_NAME + "\\info.txt";
 
     public static final double MAX_ERROR = 3000;
     public static final int NEURONS_NUMBER_ON_SECOND_LAYER = 32;

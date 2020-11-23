@@ -20,10 +20,11 @@ public class NeuralNetwork {
         while (true) {
             double MSE = 0;
             for (Block block : blocks) {
-                SimpleMatrix X = new SimpleMatrix(block.getRefVector());
-                SimpleMatrix Y = X.mult(weightOfFirstLayer); // по формуле (2) из методички
-                SimpleMatrix XHatch = Y.mult(weightOfSecondLayer); // по формуле (3) из методички
-                SimpleMatrix deltaX = XHatch.minus(X); // по формуле (4) из методички
+                SimpleMatrix X, Y, XHatch, deltaX;
+                X = new SimpleMatrix(block.getRefVector());
+                Y = X.mult(weightOfFirstLayer); // по формуле (2) из методички
+                XHatch = Y.mult(weightOfSecondLayer); // по формуле (3) из методички
+                deltaX = XHatch.minus(X); // по формуле (4) из методички
 
                 changeWeights(X, Y, deltaX);
 
@@ -32,7 +33,7 @@ public class NeuralNetwork {
             }
             System.out.println("Learning epoch " + epoch++ + ":\nTotal Error: " + MSE);
             if (MSE <= maxError) {
-                learningSummary(weightOfFirstLayer, weightOfSecondLayer, MSE, epoch - 1);
+                learningInfo(weightOfFirstLayer, weightOfSecondLayer, MSE, epoch - 1);
                 break;
             }
         }
@@ -61,18 +62,14 @@ public class NeuralNetwork {
         // );
     }
 
-    public static void learningSummary(SimpleMatrix weightOfFirstLayer, SimpleMatrix weightOfSecondLayer,
-                                       double error, int steps) {
-        info = "Summary:" +
-                "\n\tBlock height: " + Config.BLOCK_HEIGHT +
-                "\n\tBlock width: " + Config.BLOCK_WIDTH +
+    public static void learningInfo(SimpleMatrix weightOfFirstLayer, SimpleMatrix weightOfSecondLayer,
+                                    double error, int steps) {
+        info = "Info:" +
+                "\n\tBlock height: " + Config.BLOCK_HEIGHT + "\n\tBlock width: " + Config.BLOCK_WIDTH +
                 "\n\tNumber of hidden layer neurons: " + Config.NEURONS_NUMBER_ON_SECOND_LAYER +
-                "\n\tLearning rate: " + Config.LEARNING_RATE +
-                "\n\tLearning steps: " + steps +
-                "\n\tFinal error: " + error +
-                "\n\tFinal 1st layer weight matrix:\n\t\t" + weightOfFirstLayer +
-                "\n\tFinal 2nd layer weight matrix:\n\t\t" + weightOfSecondLayer +
-                "\n";
+                "\n\tLearning rate: " + Config.LEARNING_RATE + "\n\tLearning steps: " + steps +
+                "\n\tFinal error: " + error + "\n\tFinal 1st layer weight matrix:\n\t\t" + weightOfFirstLayer +
+                "\n\tFinal 2nd layer weight matrix:\n\t\t" + weightOfSecondLayer + "\n";
     }
 
     public ArrayList<Block> getResultBlocks() {
