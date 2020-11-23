@@ -18,9 +18,7 @@ public class Main {
 
         try {
             image = ImageIO.read(new File(Config.IN_IMAGE_PATH));
-            System.out.println(
-                    "Read image " + Config.IN_IMAGE_PATH + ". Dimensions: " + image.getWidth() + " by " + image.getHeight()
-            );
+            System.out.println("Dimensions: " + image.getWidth() + " by " + image.getHeight());
         } catch (Exception e) {
             System.out.println("File read unsuccessful");
             e.printStackTrace();
