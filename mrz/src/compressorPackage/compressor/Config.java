@@ -12,7 +12,7 @@ public class Config {
 
     public static final double MAX_ERROR = 3000;
     public static final int NEURONS_NUMBER_ON_SECOND_LAYER = 32;
-    public static final double LEARNING_RATE = 0.0001; //В данном варианте используется адаптивный шаг, для использования заранее заданного шага см. класс NeuralNetwork, метод startTrain
+    public static final double LEARNING_RATE = 0.0001; //В данном варианте используется адаптивный шаг, для использования заранее заданного шага см. класс NeuralNetwork, метод changeWeights()
     public static final int BLOCK_WIDTH = 8;
     public static final int BLOCK_HEIGHT = 8;
 }

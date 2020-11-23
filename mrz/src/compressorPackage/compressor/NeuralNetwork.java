@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class NeuralNetwork {
     private double maxError;
-    private double learningRate; // шаг обучения задаваемый пользователем, в данном варианте не используется, так как шаг адаптивный(см. метод startTrain())
+    private double learningRate; // шаг обучения задаваемый пользователем, в данном варианте не используется, так как шаг адаптивный(см. метод changeWeights())
     private SimpleMatrix weightOfFirstLayer; // W
     private SimpleMatrix weightOfSecondLayer; // W'
     private ArrayList<Block> blocks;
